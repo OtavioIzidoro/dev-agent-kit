@@ -2,9 +2,15 @@
 
 Catálogo compartilhável de **skills**, **rules** e **subagentes** para o [Cursor](https://cursor.com).
 
-**Novo aqui?** Leia o [Tutorial — quando usar cada coisa](TUTORIAL.md) para saber qual skill, rule ou subagente escolher por tipo de tarefa.
+**Novo aqui?**
 
-> **Antes de codar:** use `/guardiao-padroes` para mapear como o projeto já faz as coisas.
+- [Tutorial completo — como e quando usar](TUTORIAL.md)
+- [Guia rápido — 1 página](GUIA-RAPIDO.md)
+- [Catálogo de agentes](AGENTS.md)
+
+> **Sempre ativo:** rule `continuidade-projeto` — continue o projeto como ele já é (instalada com este repo).
+> **Projeto grande ou legado:** use `/economia-contexto` para delimitar escopo antes de codar.
+> **Antes de codar:** use `/guardiao-padroes` para mapear padrões nos arquivos do escopo.
 
 ## Estrutura
 
@@ -19,13 +25,20 @@ skills/
 │   └── front-qa/
 │   └── api-qa/
 │   └── report-agent/
+│   └── economia-contexto/
 │   └── guardiao-padroes/
 │   └── front-implementador/
+│   └── code-reviewer/
+│   └── api-integracao/
+│   └── agente-testes/
+│   └── documentacao-tarefa/
+│   └── continuidade-projeto/
 ├── rules/                     # Cursor rules (.mdc)
 ├── agents/                    # Subagentes (.md)
 ├── scripts/install-cursor.sh  # Instalação completa
 ├── AGENTS.md                  # Índice do catálogo
-├── TUTORIAL.md                # Quando usar skill, rule ou subagente
+├── TUTORIAL.md                # Tutorial completo — uso e quando usar
+├── GUIA-RAPIDO.md             # Cola rápida — 1 página
 └── README.md
 ```
 
@@ -95,18 +108,29 @@ Para rules vindas de um repositório GitHub publicado:
 | `front-qa` | `/front-qa` | Analisar screenshots/DOM — UX, a11y, responsividade |
 | `api-qa` | `/api-qa` | Analisar requests/responses — REST, JSON, HTTP, segurança |
 | `report-agent` | `/report-agent` | Relatório final de QA — bugs e priorização |
+| `economia-contexto` | `/economia-contexto` | **Contexto mínimo antes de codar (não codifica)** |
 | `guardiao-padroes` | `/guardiao-padroes` | **Padrões do projeto antes de codar** |
 | `front-implementador` | `/front-implementador` | **Implementar telas, forms, modais, API** |
+| `code-reviewer` | `/code-reviewer` | **Revisar diff antes de PR** |
+| `api-integracao` | `/api-integracao` | **Integração API — types, hooks, erros** |
+| `agente-testes` | `/agente-testes` | **Criar testes automatizados** |
+| `documentacao-tarefa` | `/documentacao-tarefa` | **Registrar entrega de tarefa** |
+| `continuidade-projeto` | `/continuidade-projeto` | **Continuidade — padrão existente** |
 
 ## Subagentes incluídos
 
 | Agente | Função |
 |--------|--------|
+| `continuidade-projeto` | **Filosofia** — continuar projeto, diff mínimo |
+| `economia-contexto` | **Escopo mínimo** — economia de tokens, readonly |
 | `guardiao-padroes` | **Padrões do projeto — executar antes de implementar** |
 | `front-implementador` | **Desenvolver telas e fluxos UI** |
-| `code-reviewer` | Revisão de código (readonly) |
+| `code-reviewer` | **Review de diff antes de PR** |
+| `api-integracao` | **Integração front/back com endpoints** |
 | `explorer` | Explorar e mapear o codebase |
-| `verifier` | Validar entregas com testes |
+| `agente-testes` | **Escrever** testes (unit, component, E2E) |
+| `documentacao-tarefa` | **Documentar entrega** — ticket e gestão |
+| `verifier` | **Executar** suite de testes |
 | `front-qa` | Análise visual — screenshots e DOM |
 | `api-qa` | Análise de APIs — requests e responses |
 | `report-agent` | Relatório final — Technical Writer |
