@@ -25,6 +25,7 @@ Repositório central de **skills**, **rules** e **subagentes** para o Cursor.
 | `documentacao-tarefa` | `/documentacao-tarefa` | **Registrar entrega — ticket, evidência, gestão** |
 | `continuidade-projeto` | `/continuidade-projeto` | **Continuar projeto — padrão existente, diff mínimo** |
 | `mobile-store-release` | `/mobile-store-release` | **Publicar mobile — App Store, Play Store, build release** |
+| `chatbot-whatsapp` | `/chatbot-whatsapp` | **Chatbot WhatsApp via Z-API — webhook, fluxo, envio** |
 
 ## Rules (`rules/`)
 

@@ -34,6 +34,7 @@ skills/
 │   └── documentacao-tarefa/
 │   └── continuidade-projeto/
 │   └── mobile-store-release/
+│   └── chatbot-whatsapp/
 ├── rules/                     # Cursor rules (.mdc)
 ├── agents/                    # Subagentes (.md)
 ├── scripts/install-cursor.sh  # Instalação completa
@@ -117,6 +118,7 @@ Para rules vindas de um repositório GitHub publicado:
 | `agente-testes` | `/agente-testes` | **Criar testes automatizados** |
 | `documentacao-tarefa` | `/documentacao-tarefa` | **Registrar entrega de tarefa** |
 | `continuidade-projeto` | `/continuidade-projeto` | **Continuidade — padrão existente** |
+| `chatbot-whatsapp` | `/chatbot-whatsapp` | **Chatbot WhatsApp via Z-API — webhook, fluxo, envio** |
 | `mobile-store-release` | `/mobile-store-release` | **Publicar mobile — App Store e Play Store** |
 
 ## Subagentes incluídos
