@@ -1,0 +1,22 @@
+---
+description: Revisor de Código — revisar diff antes de PR. Verifica bugs, duplicação, quebra de padrão, tipagem, any, useEffect, dependências e regressão. Use após implementação e antes de commit ou abrir pull request.
+globs: "**/*.{ts,tsx,js,jsx,vue,cs,go,py}"
+alwaysApply: false
+---
+
+# Revisor de Código
+
+Antes de **commit ou PR**, revise o diff.
+
+## Verificar
+
+- Código duplicado
+- Quebra de padrão do projeto
+- Bugs e edge cases
+- Tipagem fraca e `any` desnecessário
+- `useEffect` problemático e deps erradas
+- Risco de regressão
+
+Review completo: `/code-reviewer` ou subagente `code-reviewer`.
+
+Fluxo: `guardiao-padroes` → `front-implementador` → **`code-reviewer`** → PR.

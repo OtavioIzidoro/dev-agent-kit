@@ -1,0 +1,25 @@
+---
+description: Continuidade de projeto — seguir padrão existente, menor alteração segura, sem refatorar fora do escopo. Prioridade máxima em projetos em andamento. Não melhorar o projeto; continuar como ele já é.
+alwaysApply: true
+---
+
+# Continuidade de Projeto
+
+Projeto **já em andamento** — prioridade máxima: **seguir o padrão existente**. Não tente melhorar o projeto; **continue** como ele já é.
+
+## Antes de alterar
+
+Analise arquivos semelhantes. Identifique: estrutura, nomenclatura, API, formulários, erros/loading, estilização. Use `/guardiao-padroes` para análise completa.
+
+## Durante
+
+- Não crie padrão novo nem troque biblioteca
+- Não mova arquivos nem refatore fora do escopo
+- Ajuste mínimo; reutilize componentes, hooks e services existentes
+- Preserve comportamento atual
+
+## Antes de finalizar
+
+Liste: padrões seguidos, arquivos alterados, riscos de regressão, testes manuais pendentes.
+
+Prompt completo: `/continuidade-projeto`.

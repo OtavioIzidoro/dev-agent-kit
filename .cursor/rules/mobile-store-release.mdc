@@ -1,0 +1,19 @@
+---
+description: Mobile Store Release — preparar app para App Store e Google Play (assinatura, permissões, privacidade, versionamento, build release). Use ao editar android/, ios/, app.json, eas.json, pubspec.yaml ou capacitor.config.
+globs: "{**/android/**,**/ios/**,**/app.json,**/app.config.{js,ts},**/eas.json,**/pubspec.yaml,**/capacitor.config.{json,ts}}"
+alwaysApply: false
+---
+
+# Mobile Store Release
+
+Ao preparar publicação mobile:
+
+1. Identifique stack (Expo, RN, Flutter, Capacitor, nativo)
+2. Valide Android e iOS **separadamente**
+3. Revise permissões — remova não utilizadas; descrições claras no iOS
+4. Alinhe Data Safety e Privacy Nutrition Label ao comportamento real
+5. Incremente `versionCode` / build number antes de submeter
+6. **Nunca** commitar keystore, certificados ou senhas
+7. Diff mínimo — só o necessário para publicação
+
+Fluxo completo: `/mobile-store-release`. Subagente: `mobile-store-release`.
