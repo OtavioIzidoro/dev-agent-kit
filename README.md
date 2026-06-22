@@ -33,6 +33,7 @@ skills/
 │   └── agente-testes/
 │   └── documentacao-tarefa/
 │   └── continuidade-projeto/
+│   └── mobile-store-release/
 ├── rules/                     # Cursor rules (.mdc)
 ├── agents/                    # Subagentes (.md)
 ├── scripts/install-cursor.sh  # Instalação completa
@@ -116,6 +117,7 @@ Para rules vindas de um repositório GitHub publicado:
 | `agente-testes` | `/agente-testes` | **Criar testes automatizados** |
 | `documentacao-tarefa` | `/documentacao-tarefa` | **Registrar entrega de tarefa** |
 | `continuidade-projeto` | `/continuidade-projeto` | **Continuidade — padrão existente** |
+| `mobile-store-release` | `/mobile-store-release` | **Publicar mobile — App Store e Play Store** |
 
 ## Subagentes incluídos
 
@@ -134,6 +136,7 @@ Para rules vindas de um repositório GitHub publicado:
 | `front-qa` | Análise visual — screenshots e DOM |
 | `api-qa` | Análise de APIs — requests e responses |
 | `report-agent` | Relatório final — Technical Writer |
+| `mobile-store-release` | **Publicação mobile** — build, assinatura, lojas |
 
 O agente principal delega subagentes automaticamente com base no campo `description` de cada arquivo.
 

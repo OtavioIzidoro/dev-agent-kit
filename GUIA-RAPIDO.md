@@ -49,6 +49,7 @@ Cola este fluxo no dia a dia. Detalhes: [TUTORIAL.md](TUTORIAL.md).
 | Fechar ticket | `/documentacao-tarefa` |
 | Relatório sprint | `/sprint-status-report` |
 | Onde está X? | `explorer` |
+| Publicar app mobile (lojas) | `/mobile-store-release` |
 
 ## Testes vs QA
 

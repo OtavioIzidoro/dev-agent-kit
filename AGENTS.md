@@ -24,6 +24,7 @@ Repositório central de **skills**, **rules** e **subagentes** para o Cursor.
 | `agente-testes` | `/agente-testes` | **Criar/ajustar testes automatizados** |
 | `documentacao-tarefa` | `/documentacao-tarefa` | **Registrar entrega — ticket, evidência, gestão** |
 | `continuidade-projeto` | `/continuidade-projeto` | **Continuar projeto — padrão existente, diff mínimo** |
+| `mobile-store-release` | `/mobile-store-release` | **Publicar mobile — App Store, Play Store, build release** |
 
 ## Rules (`rules/`)
 
@@ -44,6 +45,7 @@ Repositório central de **skills**, **rules** e **subagentes** para o Cursor.
 | `api-integracao` | Integração API — tipagem, payload, paginação, erros |
 | `agente-testes` | Criar testes automatizados (unit, component, E2E) |
 | `documentacao-tarefa` | Registrar entrega de tarefa finalizada |
+| `mobile-store-release` | Publicação mobile — assinatura, permissões, privacidade, build |
 
 ## Subagentes (`agents/`)
 
@@ -62,6 +64,7 @@ Repositório central de **skills**, **rules** e **subagentes** para o Cursor.
 | `api-qa` | Análise de requests e responses (REST, JSON, HTTP, segurança) |
 | `report-agent` | Relatório final — documentação, bugs, priorização |
 | `documentacao-tarefa` | **Entrega de tarefa** — Jira, Trello, ClickUp, evidência |
+| `mobile-store-release` | **Publicação mobile** — App Store, Play Store, AAB/IPA, rejeições |
 
 ## Tutorial
 

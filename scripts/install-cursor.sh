@@ -73,6 +73,6 @@ echo "Concluído."
 echo
 echo "Skills disponíveis: /economia-contexto, /guardiao-padroes, /frontend-design, /api-contract-frontend,"
 echo "  /replicacao-fiel-tela-por-print, /sprint-status-report, /navegacao-web,"
-echo "  /agente-testes, /documentacao-tarefa, /continuidade-projeto"
+echo "  /agente-testes, /documentacao-tarefa, /continuidade-projeto, /mobile-store-release"
 echo
 echo "Reinicie ou abra um novo chat no Cursor para carregar rules e subagentes."
