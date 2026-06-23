@@ -1,9 +1,10 @@
-# Skills — repositório Cursor
+# dev-agent-kit — skills para Cursor, Claude e Codex
 
-Catálogo compartilhável de **skills**, **rules** e **subagentes** para o [Cursor](https://cursor.com).
+Catálogo compartilhável de **skills**, **rules** e **subagentes** para [Cursor](https://cursor.com), [Claude Code](https://code.claude.com) e [OpenAI Codex](https://developers.openai.com/codex).
 
 **Novo aqui?**
 
+- **[Instalação fácil — Cursor, Claude e Codex](INSTALACAO.md)** ← comece aqui
 - [Tutorial completo — como e quando usar](TUTORIAL.md)
 - [Guia rápido — 1 página](GUIA-RAPIDO.md)
 - [Catálogo de agentes](AGENTS.md)
@@ -37,31 +38,42 @@ skills/
 │   └── chatbot-whatsapp/
 ├── rules/                     # Cursor rules (.mdc)
 ├── agents/                    # Subagentes (.md)
-├── scripts/install-cursor.sh  # Instalação completa
+├── scripts/install.sh          # Instala Cursor + Claude + Codex
+├── scripts/install-cursor.sh   # Só Cursor
+├── scripts/install-claude.sh   # Só Claude Code
+├── scripts/install-codex.sh    # Só Codex
+├── INSTALACAO.md               # Guia de instalação
 ├── AGENTS.md                  # Índice do catálogo
 ├── TUTORIAL.md                # Tutorial completo — uso e quando usar
 ├── GUIA-RAPIDO.md             # Cola rápida — 1 página
 └── README.md
 ```
 
-## Conectar ao Cursor
+## Instalar (Cursor, Claude e Codex)
 
-### Opção 1 — Script completo (recomendado)
-
-Instala skills, rules e subagentes de uma vez:
+### Opção 1 — Tudo de uma vez (recomendado)
 
 ```bash
-# No projeto onde você quer usar (escopo do projeto)
-/Volumes/externo/skills/scripts/install-cursor.sh /caminho/do/seu/projeto
+# No projeto onde você quer usar
+/caminho/para/skills/scripts/install.sh /caminho/do/seu/projeto
 
 # Ou, estando na pasta do projeto:
-/Volumes/externo/skills/scripts/install-cursor.sh .
+/caminho/para/skills/scripts/install.sh .
 
 # Global (disponível em todos os projetos)
-SCOPE=global /Volumes/externo/skills/scripts/install-cursor.sh
+SCOPE=global /caminho/para/skills/scripts/install.sh
 ```
 
-### Opção 2 — Apenas skills (Skills CLI)
+Guia completo: [INSTALACAO.md](INSTALACAO.md).
+
+### Opção 2 — Só Cursor
+
+```bash
+/caminho/para/skills/scripts/install-cursor.sh .
+SCOPE=global /caminho/para/skills/scripts/install-cursor.sh
+```
+
+### Opção 3 — Apenas skills (Skills CLI)
 
 ```bash
 # Caminho local (antes de publicar no GitHub)
@@ -80,7 +92,7 @@ Listar skills disponíveis no repositório:
 npx skills add /Volumes/externo/skills --list
 ```
 
-### Opção 3 — Cursor Settings (rules remotas)
+### Opção 4 — Cursor Settings (rules remotas)
 
 Para rules vindas de um repositório GitHub publicado:
 
@@ -90,13 +102,14 @@ Para rules vindas de um repositório GitHub publicado:
 
 > Rules locais em `rules/` são copiadas pelo script de instalação para `.cursor/rules/`.
 
-## Onde o Cursor lê cada tipo
+## Onde cada ferramenta lê cada tipo
 
-| Tipo | Origem neste repo | Destino após instalação |
-|------|-------------------|-------------------------|
-| Skills | `skills/*/SKILL.md` | `.cursor/skills/` ou `~/.cursor/skills/` |
-| Rules | `rules/*.mdc` | `.cursor/rules/` |
-| Subagentes | `agents/*.md` | `.cursor/agents/` |
+| Tipo | Origem neste repo | Cursor | Claude Code | Codex |
+|------|-------------------|--------|-------------|-------|
+| Skills | `skills/*/SKILL.md` | `.cursor/skills/` | `.claude/skills/` | `.agents/skills/` |
+| Rules | `rules/*.mdc` | `.cursor/rules/` | `.claude/rules/` | via `AGENTS.md` |
+| Subagentes | `agents/*.md` | `.cursor/agents/` | — | — |
+| Instruções | `scripts/templates/` | rules | `AGENTS.md` | `AGENTS.md` |
 
 ## Skills incluídas
 

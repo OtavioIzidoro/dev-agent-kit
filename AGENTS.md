@@ -1,6 +1,8 @@
 # Catálogo de capacidades do agente
 
-Repositório central de **skills**, **rules** e **subagentes** para o Cursor.
+Repositório central de **skills**, **rules** e **subagentes** para **Cursor**, **Claude Code** e **Codex**.
+
+> **Instalação:** [INSTALACAO.md](INSTALACAO.md) — um comando instala nas três ferramentas.
 
 > **Agentes essenciais:** [`continuidade-projeto`](skills/continuidade-projeto/SKILL.md) — **continue o projeto como ele já é** (rule sempre ativa). Em projetos grandes: [`economia-contexto`](skills/economia-contexto/SKILL.md) — **escopo mínimo antes de codar**. [`guardiao-padroes`](skills/guardiao-padroes/SKILL.md) — padrões nos arquivos do escopo.
 

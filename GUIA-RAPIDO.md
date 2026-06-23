@@ -5,8 +5,16 @@ Cola este fluxo no dia a dia. Detalhes: [TUTORIAL.md](TUTORIAL.md).
 ## Instalar
 
 ```bash
-/Volumes/externo/skills/scripts/install-cursor.sh .
+# Cursor + Claude + Codex (recomendado)
+/caminho/para/skills/scripts/install.sh .
+
+# Só uma ferramenta
+/caminho/para/skills/scripts/install.sh . cursor
+/caminho/para/skills/scripts/install.sh . claude
+/caminho/para/skills/scripts/install.sh . codex
 ```
+
+Detalhes: [INSTALACAO.md](INSTALACAO.md).
 
 ## Sempre ativo (rules)
 

@@ -25,16 +25,24 @@ Guia completo do catálogo de **skills**, **rules** e **subagentes** para o Curs
 
 ## 1. Instalação rápida
 
-### Instalar tudo no seu projeto
+Guia completo (Cursor + Claude + Codex): **[INSTALACAO.md](INSTALACAO.md)**.
+
+### Instalar tudo no seu projeto (3 ferramentas)
 
 ```bash
-/Volumes/externo/skills/scripts/install-cursor.sh /caminho/do/seu/projeto
+/caminho/para/skills/scripts/install.sh /caminho/do/seu/projeto
+```
+
+### Só Cursor
+
+```bash
+/caminho/para/skills/scripts/install-cursor.sh /caminho/do/seu/projeto
 ```
 
 ### Instalar globalmente (todas as pastas)
 
 ```bash
-SCOPE=global /Volumes/externo/skills/scripts/install-cursor.sh
+SCOPE=global /caminho/para/skills/scripts/install.sh
 ```
 
 ### Só skills (sem rules/subagentes)
