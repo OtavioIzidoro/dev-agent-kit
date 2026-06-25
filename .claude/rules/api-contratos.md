@@ -1,0 +1,13 @@
+---
+description: Padrões para APIs REST e contratos de integração frontend-backend
+paths: "**/*.{ts,tsx,js,jsx}"
+alwaysApply: false
+---
+
+# Contratos de API
+
+- Endpoints REST devem usar substantivos no plural e verbos HTTP corretos.
+- Respostas de erro devem incluir código HTTP, mensagem legível e detalhes úteis para debug.
+- DTOs de request/response devem ser tipados; evite `any`.
+- Para novas funcionalidades, considere usar a skill `/api-contract-frontend` antes de implementar.
+- Para implementar integração (types, service, hook, erros), use `/api-integracao`.
