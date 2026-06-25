@@ -19,13 +19,14 @@ Detalhes: [INSTALACAO.md](INSTALACAO.md).
 ## Sempre ativo (rules)
 
 - **continuidade-projeto** — diff mínimo, seguir padrão, não reinventar
+- **verificacao-build** — build/compilação verde antes de finalizar (.NET, Java, Node, React)
 - **portugues-comunicacao** — PT-BR
 
 ## Fluxo padrão (feature)
 
 ```
 /guardiao-padroes → /api-integracao → /front-implementador
-→ /agente-testes → /code-reviewer → /documentacao-tarefa
+→ /verificacao-build → /agente-testes → /code-reviewer → /documentacao-tarefa
 ```
 
 ## Projeto grande ou legado (antes de codar)
@@ -49,7 +50,8 @@ Detalhes: [INSTALACAO.md](INSTALACAO.md).
 | UI criativa | `/frontend-design` |
 | Escrever testes | `/agente-testes` |
 | Review antes do PR | `/code-reviewer` |
-| Rodar testes | `verifier` |
+| Validar build (.NET, Java, Node, React) | `/verificacao-build` |
+| Rodar build + testes | `verifier` |
 | QA no browser | `/navegacao-web` |
 | Review visual | `/front-qa` |
 | Review API | `/api-qa` |

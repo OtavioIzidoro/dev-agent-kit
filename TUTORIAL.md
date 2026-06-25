@@ -110,6 +110,7 @@ Fluxo padrão para **tarefa de desenvolvimento** em projeto existente:
 | # | Etapa | Comando / agente |
 |---|--------|------------------|
 | 0 | Continuidade (automático) | rule `continuidade-projeto` |
+| 0a | Build (automático) | rule `verificacao-build` |
 | 0b | Escopo mínimo (projeto grande) | `/economia-contexto` |
 | 1 | Mapear padrões | `/guardiao-padroes` |
 | 2 | Contrato API (se necessário) | `/api-contract-frontend` |
@@ -117,9 +118,10 @@ Fluxo padrão para **tarefa de desenvolvimento** em projeto existente:
 | 4 | Implementar UI | `/front-implementador` |
 | 5 | Criar testes | `/agente-testes` |
 | 6 | Review do diff | `/code-reviewer` |
-| 7 | Rodar suite | subagente `verifier` |
-| 8 | QA manual (opcional) | `/navegacao-web`, `/front-qa`, `/api-qa` |
-| 9 | Documentar entrega | `/documentacao-tarefa` |
+| 7 | Validar build | `/verificacao-build` ou rule automática |
+| 8 | Rodar suite | subagente `verifier` |
+| 9 | QA manual (opcional) | `/navegacao-web`, `/front-qa`, `/api-qa` |
+| 10 | Documentar entrega | `/documentacao-tarefa` |
 
 ---
 
@@ -130,6 +132,7 @@ Rules **não precisam ser invocadas** — entram no contexto sozinhas.
 | Rule | Quando aplica | Efeito |
 |------|---------------|--------|
 | **`continuidade-projeto`** | **Sempre** | Diff mínimo, seguir padrão, não reinventar |
+| **`verificacao-build`** | **Sempre** | Build/compilação verde antes de finalizar |
 | **`portugues-comunicacao`** | **Sempre** | Respostas em PT-BR |
 | **`economia-contexto`** | Projetos grandes/legados | Escopo mínimo, arquivos essenciais |
 | `guardiao-padroes` | Ao implementar/alterar código | Lembra de analisar padrões antes |

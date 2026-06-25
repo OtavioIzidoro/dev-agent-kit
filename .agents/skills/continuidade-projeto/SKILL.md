@@ -77,6 +77,6 @@ Ao concluir uma tarefa, entregue:
 - [fluxo/tela a validar]
 ```
 
-Depois: `/code-reviewer` → `/agente-testes` → `/documentacao-tarefa` (se aplicável).
+Depois: `/verificacao-build` → `/code-reviewer` → `/agente-testes` → `/documentacao-tarefa` (se aplicável).
 
 Checklist: [references/checklist-continuidade.md](references/checklist-continuidade.md)

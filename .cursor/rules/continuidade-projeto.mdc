@@ -20,6 +20,7 @@ Analise arquivos semelhantes. Identifique: estrutura, nomenclatura, API, formul�
 
 ## Antes de finalizar
 
-Liste: padrões seguidos, arquivos alterados, riscos de regressão, testes manuais pendentes.
+- Rode build/compilação do projeto (rule `verificacao-build`)
+- Liste: padrões seguidos, arquivos alterados, riscos de regressão, testes manuais pendentes
 
 Prompt completo: `/continuidade-projeto`.

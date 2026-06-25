@@ -28,12 +28,14 @@ Repositório central de **skills**, **rules** e **subagentes** para **Cursor**, 
 | `continuidade-projeto` | `/continuidade-projeto` | **Continuar projeto — padrão existente, diff mínimo** |
 | `mobile-store-release` | `/mobile-store-release` | **Publicar mobile — App Store, Play Store, build release** |
 | `chatbot-whatsapp` | `/chatbot-whatsapp` | **Chatbot WhatsApp via Z-API — webhook, fluxo, envio** |
+| `verificacao-build` | `/verificacao-build` | **Build/compilação — .NET, Java, Node, React — evitar crash no deploy** |
 
 ## Rules (`rules/`)
 
 | Rule | Escopo |
 |------|--------|
 | `continuidade-projeto` | **Sempre ativa** — continuar projeto, não reinventar |
+| `verificacao-build` | **Sempre ativa** — build verde antes de finalizar (.NET, Java, Node, React) |
 | `portugues-comunicacao` | Sempre ativa — PT-BR |
 | `api-contratos` | Arquivos `*.{ts,tsx,js,jsx}` |
 | `frontend-padroes` | Arquivos `*.{tsx,jsx,vue}` |
@@ -62,7 +64,7 @@ Repositório central de **skills**, **rules** e **subagentes** para **Cursor**, 
 | `api-integracao` | **Integração API** — types, service, hook, contrato, erros |
 | `agente-testes` | **Testes automatizados** — unit, component, hook, E2E |
 | `explorer` | Mapear e entender o codebase |
-| `verifier` | **Executar** testes existentes (não cria testes) |
+| `verifier` | **Executar** build + testes existentes (não cria testes) |
 | `front-qa` | Análise de screenshots e DOM (UX, a11y, visual) |
 | `api-qa` | Análise de requests e responses (REST, JSON, HTTP, segurança) |
 | `report-agent` | Relatório final — documentação, bugs, priorização |

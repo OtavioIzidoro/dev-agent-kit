@@ -9,7 +9,7 @@ Catálogo compartilhável de **skills**, **rules** e **subagentes** para [Cursor
 - [Guia rápido — 1 página](GUIA-RAPIDO.md)
 - [Catálogo de agentes](AGENTS.md)
 
-> **Sempre ativo:** rule `continuidade-projeto` — continue o projeto como ele já é (instalada com este repo).
+> **Sempre ativo:** rules `continuidade-projeto` e `verificacao-build` — continue o projeto como ele já é e valide build antes de finalizar (instaladas com este repo).
 > **Projeto grande ou legado:** use `/economia-contexto` para delimitar escopo antes de codar.
 > **Antes de codar:** use `/guardiao-padroes` para mapear padrões nos arquivos do escopo.
 
@@ -36,6 +36,7 @@ skills/
 │   └── continuidade-projeto/
 │   └── mobile-store-release/
 │   └── chatbot-whatsapp/
+│   └── verificacao-build/
 ├── rules/                     # Cursor rules (.mdc)
 ├── agents/                    # Subagentes (.md)
 ├── scripts/install.sh          # Instala Cursor + Claude + Codex
