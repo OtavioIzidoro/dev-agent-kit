@@ -1,4 +1,3 @@
-````md
 ---
 name: analise-qualidade-entregas-periodo
 description: >
@@ -500,6 +499,3 @@ Use esta régua:
 * **Nunca use horas exorbitantes desproporcionais ao trabalho entregue.**
 * Sempre registre os arquivos principais alterados.
 * Sempre destaque riscos e pontos de atenção.
-
-```
-````
