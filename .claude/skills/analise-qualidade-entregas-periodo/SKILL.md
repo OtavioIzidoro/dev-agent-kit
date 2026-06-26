@@ -3,13 +3,13 @@
 name: analise-qualidade-entregas-periodo
 description: >
   Analisa as tarefas desenvolvidas em uma data ou mês informado, avaliando qualidade
-  do código, impacto técnico, estimativa de tempo por tarefa e tempo total equivalente
-  considerando jornada média de 8 horas por dia. Deve considerar que o desenvolvimento
-  foi feito com Vibe Code/IA assistida, podendo haver diferença entre tempo real de execução
-  e tempo tradicional estimado.
+  do código, impacto técnico e tempo de trabalho efetivo com Vibe Code/IA assistida
+  por tarefa e total do período, considerando jornada média de 8 horas por dia.
+  O tempo registrado representa horas realmente dedicadas ao desenvolvimento, não
+  estimativa teórica.
 ---
 
-# Skill: Análise de Qualidade, Entregas e Estimativa de Tempo por Período
+# Skill: Análise de Qualidade, Entregas e Tempo de Trabalho por Período
 
 ## Objetivo
 
@@ -27,25 +27,44 @@ Com base nesse parâmetro, você deve analisar:
 2. Quais arquivos foram alterados.
 3. Qual foi a qualidade do código entregue.
 4. Qual foi a complexidade técnica de cada tarefa.
-5. Qual seria a estimativa de tempo tradicional para desenvolver cada tarefa.
-6. Qual seria a estimativa considerando Vibe Code/IA assistida.
-7. Qual o tempo total estimado.
-8. Quantos dias úteis isso representa considerando 8 horas por dia.
-9. Gerar um relatório final em Markdown `.md`.
+5. Quanto tempo foi **efetivamente trabalhado** em cada tarefa com Vibe Code/IA assistida.
+6. Qual o tempo total de trabalho do período.
+7. Quantos dias úteis isso representa considerando 8 horas por dia.
+8. Gerar um relatório final em Markdown `.md`.
 
 ---
 
-## Regra importante sobre Vibe Code
+## Regra fundamental: tempo de Vibe Code = tempo real trabalhado
 
 Considere que o desenvolvimento foi feito usando Vibe Code, Cursor ou IA assistida.
 
-Por isso, a análise deve separar:
+**O tempo com Vibe Code NÃO é estimativa teórica.** É o registro de quanto o desenvolvedor **realmente dedicou** à tarefa — prompts, revisão, testes, correções e retrabalho incluídos.
 
-- **Tempo tradicional estimado:** quanto tempo um desenvolvedor levaria fazendo manualmente.
-- **Tempo com Vibe Code estimado:** quanto tempo pode ter levado usando IA assistida.
-- **Observação de variação:** explicar que o tempo real pode ser menor ou maior dependendo de prompts, retrabalho, testes, revisão e correções.
+### O que registrar
 
-Nunca trate a estimativa como verdade absoluta. Sempre apresente como estimativa técnica.
+- **Tempo de trabalho com Vibe Code:** horas efetivamente gastas na tarefa durante sessões de desenvolvimento assistido por IA.
+- Esse valor será usado como referência de produtividade e entrega do período.
+
+### O que NÃO fazer
+
+- **Não chame de "estimativa".** Use termos como *tempo de trabalho*, *horas dedicadas*, *tempo efetivo com Vibe Code*.
+- **Não inflar horas.** Registre apenas o tempo plausível e proporcional ao escopo real da tarefa.
+- **Não use faixas exorbitantes** que não condizem com o volume de alterações, commits e complexidade observada.
+- **Não projete tempo tradicional** como se fosse tempo trabalhado — comparações teóricas sem IA são secundárias e opcionais; o foco do relatório é o tempo real com Vibe Code.
+
+### Como calibrar o tempo (conservador e realista)
+
+Baseie-se nas evidências do Git e no escopo da tarefa:
+
+| Evidência observada | Orientação de tempo |
+| ------------------- | ------------------- |
+| Ajuste pontual (1–2 arquivos, poucas linhas) | 0,25h a 0,75h |
+| Correção ou ajuste simples | 0,5h a 1,5h |
+| Feature ou integração média | 1,5h a 4h |
+| Feature complexa ou múltiplos arquivos | 4h a 8h |
+| Tarefa muito grande (vários commits, escopo amplo) | 8h a 16h (somente com evidência clara) |
+
+Na dúvida, **prefira o valor menor** dentro da faixa compatível com o escopo. O total do período deve ser coerente com a quantidade e o tamanho das entregas — não com quanto "levaria" sem IA.
 
 ---
 
@@ -194,56 +213,50 @@ Classificação:
 
 ---
 
-### 5. Estimar tempo por tarefa
+### 5. Registrar tempo de trabalho por tarefa
 
-Para cada tarefa, estime:
+Para cada tarefa, registre o **tempo efetivo de trabalho com Vibe Code** — quanto foi realmente dedicado à entrega.
 
-#### Tempo tradicional
+#### Critérios para definir o tempo
 
-Quanto tempo um desenvolvedor levaria sem Vibe Code/IA.
+Considere o que entra no tempo trabalhado:
 
-Use como referência:
+* Sessões de prompt e iteração com IA
+* Revisão e ajuste do código gerado
+* Testes manuais e validação
+* Correções e retrabalho necessários
+* Integração e verificação no projeto
 
-| Complexidade | Tempo tradicional |
-| ------------ | ----------------- |
-| Muito baixa  | 0.5h a 1h         |
-| Baixa        | 1h a 3h           |
-| Média        | 3h a 8h           |
-| Alta         | 8h a 16h          |
-| Muito alta   | 16h a 40h+        |
+#### Regras de registro
 
-#### Tempo com Vibe Code
+1. **Proporcional ao escopo:** poucos arquivos e diff pequeno → poucas horas; escopo amplo → mais horas, mas sempre dentro do plausível.
+2. **Conservador:** na dúvida entre duas faixas, use a menor.
+3. **Sem inflação:** não some horas de tarefas pequenas como se fossem dias inteiros.
+4. **Justificativa obrigatória:** explique por que aquele tempo faz sentido com base nos commits, arquivos e complexidade observados.
 
-Quanto tempo pode ter levado com IA assistida.
+#### Referência de calibração (Vibe Code — tempo real)
 
-Use como referência:
+| Complexidade | Tempo de trabalho típico |
+| ------------ | ------------------------ |
+| Muito baixa  | 0,25h a 0,5h             |
+| Baixa        | 0,5h a 1,5h              |
+| Média        | 1,5h a 4h                |
+| Alta         | 4h a 8h                  |
+| Muito alta   | 8h a 16h (raro; exige evidência forte) |
 
-| Complexidade | Tempo com Vibe Code |
-| ------------ | ------------------- |
-| Muito baixa  | 0.25h a 0.5h        |
-| Baixa        | 0.5h a 1.5h         |
-| Média        | 1.5h a 4h           |
-| Alta         | 4h a 8h             |
-| Muito alta   | 8h a 20h+           |
+Fatores que **aumentam** o tempo registrado (porque de fato foram trabalhados):
 
-Considere que Vibe Code pode acelerar:
-
-* Criação de componentes
-* Ajustes repetitivos
-* Integrações simples
-* Refatorações guiadas
-* Documentação
-* Testes manuais orientados
-
-Mas pode aumentar tempo quando houver:
-
-* Retrabalho
-* Prompt mal definido
+* Retrabalho e debug
+* Prompt mal definido exigindo várias iterações
 * Código gerado fora do padrão
-* Debug complexo
-* Falta de contexto do projeto
-* Erros silenciosos
 * Integração com regra de negócio sensível
+* Testes e validação manual extensos
+
+Fatores que **mantêm o tempo baixo** (mesmo com diff grande):
+
+* Ajustes repetitivos guiados por IA
+* Refatorações mecânicas
+* Documentação ou boilerplate gerado rapidamente
 
 ---
 
@@ -251,21 +264,17 @@ Mas pode aumentar tempo quando houver:
 
 Ao final, some:
 
-* Total tradicional estimado em horas
-* Total com Vibe Code estimado em horas
-* Diferença estimada
-* Economia estimada
+* **Total de horas trabalhadas com Vibe Code** no período
 * Total em dias úteis considerando 8h/dia
 
 Exemplo:
 
 ```txt
-Total tradicional estimado: 40h
-Total com Vibe Code estimado: 18h
-Economia estimada: 22h
-Equivalente tradicional: 5 dias úteis
-Equivalente com Vibe Code: 2,25 dias úteis
+Total de horas trabalhadas (Vibe Code): 12h
+Equivalente em dias úteis (8h/dia): 1,5 dias
 ```
+
+O total deve ser coerente com o volume de entregas — se parecer desproporcionalmente alto ou baixo, revise tarefa a tarefa antes de fechar o relatório.
 
 ---
 
@@ -290,7 +299,7 @@ relatorio-qualidade-entregas-YYYY-MM.md
 O relatório deve seguir exatamente esta estrutura:
 
 ```md
-# Relatório de Qualidade, Entregas e Estimativa de Tempo
+# Relatório de Qualidade, Entregas e Tempo de Trabalho
 
 ## 1. Período analisado
 
@@ -309,20 +318,19 @@ Informar:
 - Quantidade de commits analisados
 - Principais áreas impactadas
 - Qualidade geral
-- Tempo total estimado tradicional
-- Tempo total estimado com Vibe Code
+- **Total de horas trabalhadas com Vibe Code**
 - Dias úteis equivalentes considerando 8h/dia
 
-## 3. Observação sobre Vibe Code / IA assistida
+## 3. Observação sobre Vibe Code / tempo de trabalho
 
-Informar que as estimativas consideram que parte do trabalho foi feito com Vibe Code, Cursor ou IA assistida.
+Informar que o desenvolvimento foi feito com Vibe Code, Cursor ou IA assistida.
 
-Explicar que:
+Deixar explícito que:
 
-- O tempo tradicional representa uma estimativa sem IA.
-- O tempo com Vibe Code representa uma estimativa com apoio de IA.
-- Pode existir diferença entre tempo estimado e tempo real.
-- A produtividade pode variar conforme qualidade dos prompts, revisão humana, testes e retrabalho.
+- **O tempo com Vibe Code registrado neste relatório é o tempo efetivamente dedicado ao trabalho**, não uma estimativa teórica de quanto levaria sem IA.
+- Inclui prompts, revisão humana, testes, correções e retrabalho.
+- Os valores foram calibrados de forma conservadora e proporcional ao escopo real de cada tarefa.
+- Horas exorbitantes ou desproporcionais ao volume de alterações **não** devem aparecer neste relatório.
 
 ## 4. Tarefas identificadas
 
@@ -365,14 +373,11 @@ Classificação: Excelente / Boa / Regular / Precisa de revisão
 **Risco de regressão:**  
 Baixo / Médio / Alto
 
-**Estimativa de tempo tradicional:**  
+**Tempo de trabalho (Vibe Code):**  
 X horas
 
-**Estimativa com Vibe Code:**  
-X horas
-
-**Justificativa da estimativa:**  
-Explicar o motivo da estimativa.
+**Justificativa do tempo:**  
+Explicar por que esse tempo reflete o trabalho real dedicado, com base no escopo, commits e complexidade observados.
 
 ---
 
@@ -391,19 +396,16 @@ Avaliar o conjunto das entregas:
 
 ## 6. Tabela consolidada de tarefas
 
-| # | Tarefa | Tipo | Complexidade | Qualidade | Tempo tradicional | Tempo Vibe Code | Risco |
-|---|---|---|---|---|---:|---:|---|
-| 1 | Nome | Feature | Média | 8/10 | 6h | 3h | Médio |
+| # | Tarefa | Tipo | Complexidade | Qualidade | Tempo Vibe Code | Risco |
+|---|---|---|---|---:|---:|---|
+| 1 | Nome | Feature | Média | 8/10 | 2,5h | Médio |
 
-## 7. Total estimado
+## 7. Total de horas trabalhadas
 
 | Indicador | Resultado |
 |---|---:|
-| Total tradicional estimado | Xh |
-| Total estimado com Vibe Code | Xh |
-| Economia estimada | Xh |
-| Dias úteis tradicionais, 8h/dia | X dias |
-| Dias úteis com Vibe Code, 8h/dia | X dias |
+| Total de horas trabalhadas (Vibe Code) | Xh |
+| Dias úteis equivalentes (8h/dia) | X dias |
 
 ## 8. Conclusão
 
@@ -411,8 +413,7 @@ Resumo final dizendo:
 
 - Se a entrega foi boa
 - Se existem riscos
-- Se o tempo estimado faz sentido
-- Se o uso de Vibe Code trouxe ganho
+- Se o tempo registrado é coerente com o volume entregue
 - Quais pontos deveriam ser revisados antes de produção, se houver
 
 ## 9. Recomendações
@@ -494,10 +495,11 @@ Use esta régua:
 * Não rode comandos destrutivos.
 * Sempre gere o relatório em Markdown.
 * Sempre considere jornada média de 8 horas por dia.
-* Sempre diferencie tempo tradicional de tempo com Vibe Code.
-* Sempre informe que a estimativa é aproximada.
+* **Sempre registre tempo como horas trabalhadas com Vibe Code — nunca como "estimativa".**
+* **Sempre calibre de forma conservadora; prefira menos horas quando o escopo for pequeno.**
+* **Nunca use horas exorbitantes desproporcionais ao trabalho entregue.**
 * Sempre registre os arquivos principais alterados.
 * Sempre destaque riscos e pontos de atenção.
 
 ```
-```
+````
