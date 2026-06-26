@@ -122,6 +122,7 @@ Para rules vindas de um repositório GitHub publicado:
 | `sprint-status-report` | `/sprint-status-report` | Relatório executivo de sprint |
 | `navegacao-web` | `/navegacao-web` | Abrir sistema e executar cenários no browser |
 | `front-qa` | `/front-qa` | Analisar screenshots/DOM — UX, a11y, responsividade |
+| `responsividade` | `/responsividade` | **Responsividade impecável — PWA, browser, todos os dispositivos** |
 | `api-qa` | `/api-qa` | Analisar requests/responses — REST, JSON, HTTP, segurança |
 | `report-agent` | `/report-agent` | Relatório final de QA — bugs e priorização |
 | `economia-contexto` | `/economia-contexto` | **Contexto mínimo antes de codar (não codifica)** |

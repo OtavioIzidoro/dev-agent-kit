@@ -16,6 +16,7 @@ Repositório central de **skills**, **rules** e **subagentes** para **Cursor**, 
 | `sprint-status-report` | `/sprint-status-report` | Relatório executivo de sprint |
 | `navegacao-web` | `/navegacao-web` | Executar cenários no browser |
 | `front-qa` | `/front-qa` | Análise visual — responsividade, UX, a11y |
+| `responsividade` | `/responsividade` | **Auditar e corrigir responsividade — PWA, navegador, mobile, tablet e desktop** |
 | `api-qa` | `/api-qa` | Análise de requests/responses — REST, JSON, HTTP, segurança |
 | `report-agent` | `/report-agent` | Relatório final de QA — bugs, priorização, veredito |
 | `economia-contexto` | `/economia-contexto` | **Preparar contexto mínimo antes de codar (não codifica)** |
@@ -115,6 +116,7 @@ Use `/economia-contexto` **antes** de codar (não codifica — só delimita esco
 | Validar build/compilação | `verificacao-build` |
 | Rodar build + testes | `verifier` |
 | QA visual | `front-qa` |
+| Corrigir responsividade | `responsividade` |
 | QA de API | `api-qa` |
 | Fechar ticket | `documentacao-tarefa` |
 <!-- dev-agent-kit:end -->
