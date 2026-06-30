@@ -30,6 +30,7 @@ Repositório central de **skills**, **rules** e **subagentes** para **Cursor**, 
 | `mobile-store-release` | `/mobile-store-release` | **Publicar mobile — App Store, Play Store, build release** |
 | `chatbot-whatsapp` | `/chatbot-whatsapp` | **Chatbot WhatsApp via Z-API — webhook, fluxo, envio** |
 | `verificacao-build` | `/verificacao-build` | **Build/compilação — .NET, Java, Node, React — evitar crash no deploy** |
+| `offline-first-fullstack` | `/offline-first-fullstack` | **Módulo offline-first — fila local, sync push/pull, conflitos, PWA** |
 
 ## Rules (`rules/`)
 
@@ -119,4 +120,5 @@ Use `/economia-contexto` **antes** de codar (não codifica — só delimita esco
 | Corrigir responsividade | `responsividade` |
 | QA de API | `api-qa` |
 | Fechar ticket | `documentacao-tarefa` |
+| Módulo offline-first (front + back) | `offline-first-fullstack` |
 <!-- dev-agent-kit:end -->
